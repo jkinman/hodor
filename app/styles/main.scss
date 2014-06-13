@@ -11,12 +11,22 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 /* Space out content a bit */
 body {
-    background-image: url('/images/13704-game-of-thrones-stark-winter-is-coming.jpg');
+    background-image: url('/images/HH-BG1.png');
+    font-family: 'Oswald', sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding-top: 20px;
     padding-bottom: 20px;
     color: #FFF;
 }
 
+p.weight1 {
+     font-family: "Oswald";
+     font-weight: 400;
+     font-style: normal;
+     font-size: 36px;
+     line-height: 30px;
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -38,13 +48,52 @@ body {
     padding-bottom: 19px;
 }
 
+#navLogo{
+    top: -8px;
+    position: absolute;
+    width: 50px;
+
+}
+
+.navbar-hodor {
+    background-color: transparent;
+    border: none;
+}
+.nav > li {
+    width: 125px;
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+}
+
+.nav > li > a:hover {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: red;
+}
+.nav > li > a:hover:after {
+
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: transparent;
+}
 /* Custom page footer */
 .footer {
     padding-top: 19px;
     color: #777;
-    border-top: 1px solid #e5e5e5;
+    // border-top: 1px solid #e5e5e5;
 }
-
+.header {
+  border-bottom: none;
+}
 .container-narrow > hr {
     margin: 30px 0;
 }
@@ -53,7 +102,7 @@ body {
 .jumbotron {
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
-    background-color: #222;
+    background-color: transparent;
 }
 
 .jumbotron .btn {
