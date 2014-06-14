@@ -38,6 +38,10 @@ angular.module('hodorApp', [
 
 		$locationProvider.html5Mode(true);
 
+		var images = ['HH-BG1.png', 'HH-BG2.png', 'HH-BG3.png', 'HH-BG4.png'];
+		$('body').css({
+			'background-image': 'url(images/' + images[Math.floor(Math.random() * images.length)] + ')'
+		});
 		// Intercept 401s and redirect you to login
 		$httpProvider.interceptors.push(['$q', '$location',
 			function($q, $location) {
