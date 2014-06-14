@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 		},
 		express: {
 			options: {
-				port: process.env.PORT || 8080
+				port: process.env.PORT || 9000
 			},
 			dev: {
 				options: {
@@ -184,7 +184,7 @@ module.exports = function(grunt) {
 						// opens browser on initial server start
 						nodemon.on('config:update', function() {
 							setTimeout(function() {
-								require('open')('http://localhost:8080/debug?port=5858');
+								require('open')('http://localhost:9000/debug?port=5858');
 							}, 500);
 						});
 					}
@@ -237,7 +237,7 @@ module.exports = function(grunt) {
 					src: [
 						'<%= yeoman.dist %>/public/scripts/{,*/}*.js',
 						'<%= yeoman.dist %>/public/styles/{,*/}*.css',
-						'<%= yeoman.dist %>/public/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+						// '<%= yeoman.dist %>/public/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
 						'<%= yeoman.dist %>/public/styles/fonts/*'
 					]
 				}
