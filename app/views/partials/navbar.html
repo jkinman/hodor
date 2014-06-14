@@ -1,18 +1,23 @@
-<div class="header text-center" ng-controller="NavbarCtrl">
-
-	<nav class="navbar navbar-hodor navbar-static-top" role="navigation">
+<div class="header " ng-controller="NavbarCtrl">
 	  <div class="container-fluid">
-	  
-	  <ul class="nav navbar-nav">
-		<li><a ng-mouseover="hodorize()" ng-mouseout="unhodorize()" href="/home">Hodor Hoodies</a></li>
-		<li >  <a href="/home"><img id="navLogo" src="images/HH.png" class>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-	    <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
-	        <a width="20" ng-mouseover="hodorize()" ng-mouseout="unhodorize()" ng-href="{{item.link}}">{{item.title}}</a>
-	    </li>
-	    <li ng-hide="currentUser" ng-class="{active: isActive('/login')}"><a ng-mouseover="hodorize()" ng-mouseout="unhodorize()" href="/login">Login</a></li>
-	    <li ng-hide="currentUser" ng-class="{active: isActive('/signup')}"><a ng-mouseover="hodorize()" ng-mouseout="unhodorize()" href="/signup">Sign up</a></li>
-	    <li ng-show="currentUser" ng-class="{active: isActive('/logout')}"><a ng-mouseover="hodorize()" ng-mouseout="unhodorize()" href="" ng-click="logout()">Logout</a></li>
-	  </ul>
+	<nav class="navbar navbar-hodor navbar-static-top" role="navigation">
+
+		  <ul class="nav navbar-nav">
+			<li><a href="/home">Hodor Hoodies</a></li>
+			<li class="hidden-xs"><a href="/home"><img id="navLogo" src="images/HH.png" class></a></li>
+			<li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
+				<a ng-mouseover="hodorize($event)" ng-mouseout="unhodorize($event)" ng-href="{{item.link}}">{{item.title}}</a>
+			</li>
+			<li class="dropdown" ng-show="currentUser">
+				<a href="" class="dropdown-toggle" data-toggle="dropdown">{{currentUser.name||currentUser.name}} <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li ng-show="currentUser" ng-class="{active: isActive('/logout')}"><a ng-mouseover="hodorize($event)" ng-mouseout="unhodorize($event)" href="" ng-click="logout()">Logout</a></li>
+					<li ng-show="currentUser" ng-class="{active: isActive('/settings')}"><a ng-mouseover="hodorize($event)" ng-mouseout="unhodorize($event)" href="/settings" >settings</a></li>
+				</ul>
+			</li>
+			<li ng-hide="currentUser" ng-class="{active: isActive('/login')}"><a ng-mouseover="hodorize($event)" ng-mouseout="unhodorize($event)" href="/login">Login</a></li>
+			<li ng-hide="currentUser" ng-class="{active: isActive('/signup')}"><a ng-mouseover="hodorize($event)" ng-mouseout="unhodorize($event)" href="/signup">Sign up</a></li>
+		  </ul>
 
 	  </div>
 	</nav>
