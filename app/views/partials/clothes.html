@@ -1,6 +1,15 @@
 <div ng-include="'partials/navbar'"></div>
-<p>This is the clothes view.</p>
-  <div ng-repeat="shirt in gear">
-      <h4>{{shirt.name}}</h4>
-      <p>{{shirt.info}}</p>
-  </div>
+<p></p>
+<div class="media products-sml row">
+	<div ng-repeat="shirt in gear" class="product col-xs-6 col-md-6">
+	<a class="" href="#">
+		<img class="media-object thumbnail" src="{{shirt.thumb}}" alt="{{shirt.info}}">
+		</a>
+	<div class="media-body">
+	<h4 class="media-heading">{{shirt.name}}</h4>
+		{{shirt.info}}
+		</div>
+	  </div>
+</div>
+
+<div ng-include="'partials/footer'"></div>
