@@ -1,9 +1,9 @@
 <div ng-include="'partials/navbar.html'"></div>
 
-<div class="row">
+<div class="row jumbotron shadow">
   <div class="col-sm-12">
     <h1>Login</h1>
-    <p>Accounts are reset on server restart from <code>dummydata.js</code>. Default account is <code>test@test.com</code> / <code>test</code></p>
+<!--     <p>Accounts are reset on server restart from <code>dummydata.js</code>. Default account is <code>test@test.com</code> / <code>test</code></p>-->
   </div>
   <div class="col-sm-12">
     <form class="form" name="form" ng-submit="login(form)" novalidate>
@@ -27,14 +27,16 @@
         <p class="help-block">{{ errors.other }}</p>
       </div>
 
-      <button type="submit" class="btn btn-lg btn-primary"> Sign in </button>
+      <button type="submit" class="btn btn-lg btn-primary"> HODOR </button>
     </form>
   </div>
 </div>
-<a href="/auth/facebook" target="_self" class="btn btn-lg btn-primary">Login with Facebook</a>
+
+<a href="/auth/facebook" target="_self" class="btn btn-lg btn-primary">HODOR WITH FACEBOOK</a>
 <div class="row">
   <div class="col-sm-12">
     <hr>
     Not registered? <a href="/signup" class="text-center new-account">Create an account.</a>
   </div>
 </div>
+<div ng-include="'partials/footer'"></div>
