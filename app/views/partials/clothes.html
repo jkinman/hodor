@@ -1,8 +1,8 @@
 <div ng-include="'partials/navbar'"></div>
-<p></p>
-<div class="media products-sml row">
+
+<div class="media products-sml row" ng-controller="ClothesCtrl">
 	<div ng-repeat="shirt in gear" class="product col-xs-6 col-md-6">
-	<a class="" href="#">
+	<a class="" href="/clothes/{{$index}}">
 		<img class="media-object thumbnail" src="{{shirt.thumb}}" alt="{{shirt.info}}">
 		</a>
 	<div class="media-body">
@@ -10,6 +10,7 @@
 		{{shirt.info}}
 		</div>
 	  </div>
+
 </div>
 
 <div ng-include="'partials/footer'"></div>

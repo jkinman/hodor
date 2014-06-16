@@ -1,0 +1,58 @@
+<div ng-include="'partials/navbar'"></div>
+
+<div class="row jumbotron" ng-controller="ClothesCtrl">
+	<a href="/clothes"> <span class="glyphicon glyphicon-chevron-left"></span>back</a>
+	<h1>{{gear[$routeParams.id].name}}</h1>
+	<img class="img-thumbnail" src="{{gear[$routeParams.id].image}}">
+	<br>
+	<p>${{gear[$routeParams.id].price}}</p>
+	<p>{{gear[$routeParams.id].info}}</p>
+
+		<form class="form" name="form" ng-submit="addToCart(form)" novalidate>
+
+		<div class="form-group col-sm-4">
+			<label>size</label>
+			<select name="size" width="50" class="form-control" ng-model="product.size" required >
+				<option>S</option>
+				<option>M</option>
+				<option>L</option>
+				<option>XL</option>
+				<option>XXL</option>
+			</select>
+		</div>
+
+		<div class="form-group col-sm-4">
+			<label>quantity</label>
+			<select name="size" width="50" class="form-control" ng-model="product.quantity" required >
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+		</div>
+
+		<div class="form-group col-sm-4">
+			<label>style</label>
+			<select name="size" width="50" class="form-control" ng-model="product.style" required >
+				<option>black</option>
+				<option>navy</option>
+				<option>basketball</option>
+			</select>
+		</div>
+
+		<div class="form-group has-error">
+			<p class="help-block" ng-show="form.email.$error.required && form.password.$error.required && submitted">
+			Please select size quantity and style.
+			</p>              
+			<p class="help-block">{{ errors.other }}</p>
+		</div>
+
+	      <button type="submit" class="btn btn-lg btn-primary"> ADD TO CART </button>
+
+		</form>
+		<br>
+	<a href="/clothes"> <span class="glyphicon glyphicon-chevron-left"></span>back</a>
+</div>
+
+<div ng-include="'partials/footer'"></div>
