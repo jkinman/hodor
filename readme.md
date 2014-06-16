@@ -9,5 +9,4 @@ Finally, deploy your updated build to OpenShift with
 	git push hodor master
 
 
-	grunt build 
-	cd dist && git add . && git commit -am "describe your changes here" && git push hodor master
+	grunt build && cd dist && git add . && git commit -am "describe your changes here" && git push hodor master
