@@ -1,9 +1,10 @@
 'use strict';
 
 var express = require('express'),
-    path = require('path'),
-    fs = require('fs'),
-    mongoose = require('mongoose');
+	path = require('path'),
+	fs = require('fs'),
+	stripe = require("stripe")("sk_test_BQokikJOvBiI2HlWgH4olfQ2"),
+	mongoose = require('mongoose');
 
 /**
  * Main application file
@@ -17,10 +18,10 @@ var db = mongoose.connect(config.mongo.uri, config.mongo.options);
 
 // Bootstrap models
 var modelsPath = path.join(__dirname, 'lib/models');
-fs.readdirSync(modelsPath).forEach(function (file) {
-  if (/(.*)\.(js$|coffee$)/.test(file)) {
-    require(modelsPath + '/' + file);
-  }
+fs.readdirSync(modelsPath).forEach(function(file) {
+	if (/(.*)\.(js$|coffee$)/.test(file)) {
+		require(modelsPath + '/' + file);
+	}
 });
 
 // Populate empty DB with sample data
@@ -35,8 +36,8 @@ require('./lib/config/express')(app);
 require('./lib/routes')(app);
 
 // Start server
-app.listen(config.port, config.ip, function () {
-  console.log('Express server listening on %s:%d, in %s mode', config.ip, config.port, app.get('env'));
+app.listen(config.port, config.ip, function() {
+	console.log('Express server listening on %s:%d, in %s mode', config.ip, config.port, app.get('env'));
 });
 
 // Expose app
