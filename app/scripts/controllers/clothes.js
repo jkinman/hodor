@@ -8,6 +8,12 @@ angular.module('hodorApp')
 		});
 
 		$scope.addToCart = function(form) {
+
+			// validate data
+
+			// add item to cart cookies and cart var
+			$rootScope.currentUser = $cookieStore.get('user');
+
 			console.log(form);
 			console.log($scope.product);
 			// ecom.purchase($scope.product);
