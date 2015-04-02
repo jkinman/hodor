@@ -1,0 +1,34 @@
+├─ angular@1.2.17
+│  └─ licenses: MIT*
+├─ angular-cookies@1.2.17
+│  └─ licenses: MIT*
+├─ angular-mocks@1.2.17
+│  └─ licenses: MIT*
+├─ angular-resource@1.2.17
+│  └─ licenses: MIT*
+├─ angular-route@1.2.17
+│  └─ licenses: MIT*
+├─ angular-sanitize@1.2.17
+│  └─ licenses: MIT*
+├─ angular-scenario@1.2.17
+│  └─ licenses: MIT*
+├─ jquery@1.11.1
+│  └─ licenses
+│     └─ 0: MIT
+├─ json3@3.2.6
+│  ├─ licenses: MIT*
+│  └─ repository
+│     ├─ type: git
+│     └─ url: git://github.com/bestiejs/json3.git
+├─ bootstrap@3.1.1
+│  ├─ licenses: MIT*
+│  └─ repository: https://github.com/twbs/bootstrap
+├─ bootstrap-sass@3.1.1
+│  ├─ licenses: MIT*
+│  ├─ homepage: https://github.com/twbs/bootstrap-sass
+│  └─ repository: https://github.com/twbs/bootstrap-sass
+└─ es5-shim@2.1.0
+   ├─ licenses: MIT*
+   ├─ homepage: https://github.com/es-shims/es5-shim
+   └─ repository: http://github.com/kriskowal/es5-shim
+

@@ -18,6 +18,28 @@ module.exports = function(grunt) {
 	// Define the configuration for all the tasks
 	grunt.initConfig({
 
+		graphviz: {
+			your_target: {
+			  files: {
+			    'dependency-graph.png': 'dependency-graph.dot',
+		  		}
+			},
+		},
+
+		'modules-graph': {
+		   options: {
+		      externalDependenciesColor:'red'
+		    },
+		    files: {
+		      'dependency-graph.dot': ['app/scripts/**/*.js'],
+		    },
+			your_target: {
+				files: {
+					'dependency-graph.dot': ['app/*.js', 'app/scripts/**/*.js']
+				}
+			},
+		},
+
 		// Project settings
 		yeoman: {
 			// configurable paths
@@ -525,7 +547,8 @@ module.exports = function(grunt) {
 		'cssmin',
 		'uglify',
 		'rev',
-		'usemin'
+		'usemin',
+		'modules-graph'
 	]);
 
 	grunt.registerTask('heroku', function() {
@@ -538,4 +561,13 @@ module.exports = function(grunt) {
 		'test',
 		'build'
 	]);
+
+	grunt.loadNpmTasks('grunt-graphviz');
+	grunt.loadNpmTasks('grunt-angular-modules-graph');
+
+	// grunt.registerTask('modules-graph', function() {
+	// 	grunt.task.run(['modules-graph']);
+	// });
+	grunt.registerTask( 'graph', ['modules-graph', 'graphviz']);
+
 };

@@ -1,0 +1,10 @@
+digraph dependencies{
+  node[shape="record"]
+  "hodorApp"[label="{hodorApp|ClothesCtrl\nLoginCtrl\nMainCtrl\nNavbarCtrl\nSettingsCtrl\nSignupCtrl\nmongooseError\nAuth\nCart\nSession\nUser}"] 
+
+
+  "hodorApp" -> "ngCookies"  [color="red"]
+  "hodorApp" -> "ngResource"  [color="red"]
+  "hodorApp" -> "ngSanitize"  [color="red"]
+  "hodorApp" -> "ngRoute"  [color="red"]
+ }
