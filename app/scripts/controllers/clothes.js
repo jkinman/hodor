@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hodorApp')
-	.controller('ClothesCtrl', function($scope, $http, $routeParams) {
+	.controller('ClothesCtrl', function($scope, $http, $routeParams, $rootScope, $cookieStore) {
 		$scope.$routeParams = $routeParams;
 		$http.get('/api/gear').success(function(obj) {
 			$scope.gear = obj;

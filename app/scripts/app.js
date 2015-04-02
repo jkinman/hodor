@@ -6,7 +6,7 @@ angular.module('hodorApp', [
 	'ngSanitize',
 	'ngRoute'
 ])
-	.config(function($routeProvider, $locationProvider, $httpProvider) {
+	.config(function($routeProvider, $locationProvider, $httpProvider ) {
 		$routeProvider
 			.when('/', {
 				templateUrl: 'partials/main',
