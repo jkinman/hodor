@@ -8,6 +8,17 @@
     
         <form action="/" method="post" id="example-form" style="display: normal;">
  
+
+          <div class="form-group">
+            <label>Your Name</label>
+
+            <input type="text" name="name" class="form-control" ng-model="user.oldPassword"
+                   mongoose-error class="required"/>    
+            <p class="help-block" ng-show="form.password.$error.mongoose">
+                {{ errors.other }}
+            </p>
+          </div>
+
             <div class="form-row">
                 <label for="name" class="stripeLabel">Your Name</label>
                 <input type="text" name="name" class="required" />
@@ -53,7 +64,7 @@
                 </div>
             </div>
  
-            <button type="submit" name="submit-button">Submit</button>
+            <button type="submit" name="submit-button" class="btn btn-lg btn-primary">Submit</button>
             <span class="payment-errors"></span>
         </form>
     </div>

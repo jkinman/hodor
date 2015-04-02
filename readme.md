@@ -10,3 +10,14 @@ Finally, deploy your updated build to OpenShift with
 
 
 	grunt build && cd dist && git add . && git commit -am "describe your changes here" && git push hodor master
+
+ε793
+
+
+TODO
+- payments
+	- data modeling
+		- transactions
+		- card data
+	- integrate with stripe
+	- create check out process and UI
